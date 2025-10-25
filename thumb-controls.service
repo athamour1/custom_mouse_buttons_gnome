@@ -1,0 +1,13 @@
+[Unit]
+Description=Thumb Wheel Controls
+After=graphical.target sound.target
+
+[Service]
+ExecStart=/home/terra/thumb-controls.sh
+Restart=always
+User=terra
+Environment=DISPLAY=:0
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+
+[Install]
+WantedBy=default.target
