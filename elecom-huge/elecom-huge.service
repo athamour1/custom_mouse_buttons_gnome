@@ -1,0 +1,14 @@
+[Unit]
+Description=ELECOM HUGE Trackball Controls
+After=graphical.target sound.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/bash /usr/local/bin/elecom-huge/elecom-huge.sh
+Restart=always
+User=root
+Environment=DISPLAY=:0
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+
+[Install]
+WantedBy=multi-user.target

@@ -3,7 +3,7 @@ Description=Thumb Wheel Controls
 After=graphical.target sound.target
 
 [Service]
-ExecStart=/home/terra/thumb-controls.sh
+ExecStart=/usr/bin/bash /usr/local/bin/thumb-controls.sh
 Restart=always
 User=terra
 Environment=DISPLAY=:0
